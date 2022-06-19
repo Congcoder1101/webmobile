@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellPhone</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./asset/css/fonts/themify-icons/themify-icons.css ">
+    <link rel="stylesheet" href="./asset/css/fonts/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="header__logo">
+                <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="269.231" height="50" viewBox="0 0 269.231 50">
+                    <defs>
+                        <pattern id="patternLogo" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 530 95">
+                            <image width="530" height="95" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhIAAABfCAYAAAC9ZC4kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6REQzNUE1OThENjI3MTFFQUJDOTI5NjNDMjAyQkNFMkQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6REQzNUE1OTlENjI3MTFFQUJDOTI5NjNDMjAyQkNFMkQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpERDM1QTU5NkQ2MjcxMUVBQkM5Mjk2M0MyMDJCQ0UyRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpERDM1QTU5N0Q2MjcxMUVBQkM5Mjk2M0MyMDJCQ0UyRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtMJt2kAAAPtSURBVHja7Nzbbts6FEDB0ND//zL7mhg1oqoSuS8zjwdBj8SbV4RYY875BQBwxcsQAABCAgAQEgCAkAAAhAQAgJAAAB5wGIJyznyfdwT4N7vPg/GCOGdid/91HnkiYWPZhHvG17gCJXgiAYDfuv3Sc5knEgCAkAAAhAQAICQAACEBACAkAAAhAQAICQCgBi+kAoCfMr95dvmLtzyRAACEBAAgJAAAIQEACAkAACEBAAgJAEBIAABCAgBo7uk3W+54O9hIeu3Dcty2ZnaN/yx6b7PovM3C69F5l/M+QryB86h8c8muezaPihno/z8Kj+0oNn9P39s0Z/Zb8JDZ/nl7FFqYla57NtpgM/A1jaLjPYrO393zNt2X/SYmfvd6YDH4IDOmVe5vFh73WXh8ZpDxibgenXeEDQkRYXOJnV73JgLNmXmLY+vTHN/awIFB1bmb1iViIkdIeBrhWn1wujdjIZCczU1j4uh2wwGu28F9fQxGwY1v7p7/APVHfM67p/dE6zV2JFuUFaJn+FAz/o0Owifmzrzlm7Pq89Y6JlaGxAg26RGue3w5FLuP/9i4trPO3RPzNjff45Pz5rwTE4/yx5Z54sf4u7+z/+YIMHaj+Nq4e4w7zFkHLX8xfFmgPiyxtjCuxu6262wXE55IAMT5IBQpseb66pOiVjEhJADgXFSICSEBAMuCokVMCAkAuBYUZ6JiVg8MIbGfr38C5I+KKzFR4vw/rAEf8gDOu1uC4rdwGN9+dr79bNo/tPVEAgDuj4px4mfeQyNlzAkJAHg2KD693v1vsZEuKIQEAKyLijMxkSoohAQArA2KM//tPSjCRoWQAICYgfEpKoQEAHApJsIFha9/3jOpAM47Vgvx1VFPJAAgd9BtfUIhJAAgf0x87YoJIQEAdWJCSAAAeWJiVUh4hzsAFIwJTyQEEIDzTkykCIlpc2Fuja25syeo5bVhkUZYqMPman9YmtOc42zunHcEs+uFVDPQpsmyuTq+LMaBZh7pOWdejpXIq/GEW6hYK/XHwtwZh6shJYAXhgQ4gI2J6wQh0XLDOmgAAcgnnkosDAkxQcVD19rIOT7mznknJpKGROYNbHNhPdQYK3NnjMTEYsfDC3Um3VwWjcOVXPvd/DnvVsSEdbYwJLJv7syLZRQaC+sn17XYNzmvxYejmAgdEgBQLSb4xtc/AQAhAQAICQBASAAAQgIAQEgAAEICABASAICQAACa82ZLAPjJa7D/gScSAICQAACEBAAgJAAAIQEAICQAACEBAAgJAKAGL6QCoINpCIQEdXhrHLDyvBERQgIA/PISkb+RAACEBAAgJAAAIQEAdPBHgAEAruC43nH9c2MAAAAASUVORK5CYII="></image>
+                        </pattern>
+                    </defs>
+                    <rect id="header__logo--bg" width="269.231" height="50" fill="url(#patternLogo)"></rect>
+                </svg></a>
+            </div>
+            <div class="header__pos">
+                <div class="header__pos__icon__swap">
+                    <i class="header__pos__icon fa-solid fa-location-dot"></i>
+                </div>
+                <p class="header__pos__p">
+                    Xem giá tại <span>Miền Nam</span>
+                </p>
+            
+                <!-- <p class="header__pos_p1"></p> -->
+            </div>
+
+            <div class="header__search">
+                <div class="header__search__icon__swap">
+
+                    <i class=" header__search__icon fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" class="header__search__input" placeholder="Bạn Cần Tìm Gì ??">
+            </div>
+
+            <div class="header__call">
+                <div class="header__call__icon__swap">
+                     <i class=" header__call__icon fa-solid fa-phone"></i>
+                </div>
+                <div class="header__call_ccc">
+
+                    <p class="header__call__header">
+                        Gọi Mua Hàng
+                    </p>
+                    <h3 class="header__phone">
+                        0989407436
+                    </h3>
+                </div>
+            </div>
+
+            <div class="header__shop__near">
+                <div class="header__shop__near__swap">
+                    <i class="header__shop__near__swap fa-solid fa-location-dot"></i>
+                </div>
+                <p class="header__shop__near__p">
+                    Cửa hàng gần bạn
+                </p>
+            </div>
+
+            <div class="header_check">
+                <div class="header_check__icon__swap">
+
+                    <i class=" fa-solid fa-truck"></i>
+                </div>
+                <a href="index_profie.html">
+                <p class="header_check__p">
+                    Thành viên của nhóm
+                </p>
+                </a>
+            </div>
+
+            <div class="header__cart">
+                <div class="header__cart__icon__swap">
+                    <i class="header__cart__icon fa-brands fa-opencart"></i>
+                </div>
+                <p class="header__cart__p">
+                    Giỏ hàng
+                </p>
+            </div>
+
+            <div class="header__user">
+                <div class="header__user__icon__swap">
+                    <i class="header__user__icon fa-solid fa-user-large"></i>
+                </div>
+                <a href="index_login.html">
+                <p class="header__user__p">
+                    Đăng nhập
+                </p>
+                </a>
+            </div>
+        </header>
+
+        <div class="slider">
+            <!-- SLide Left -->
+            <div class="slider__left">
+                <ul class="slider__left__list">
+
+                    <!-- Apple -->
+                    <a href="index_tranggioithieu.html">
+                    <li class="slider__left__item">
+                        <p class="slider__item__dsc">
+                            Apple
+                        </p>
+                    </li>
+                    </a>
+                    <!-- Samsung -->
+                    <li class="slider__left__item">
+                        <p class="slider__item__dsc">
+                           Samsung
+                        </p>
+                    </li>
+                    <!-- Oppo -->
+                    <li class="slider__left__item">
+                        <p class="slider__item__dsc">
+                            Oppo
+                        </p>
+                    </li>
+                    <!-- Nokia -->
+                    <li class="slider__left__item">
+                        <p class="slider__item__dsc">
+                            Nokia
+                        </p>
+                    </li>
+                    <!-- Realme -->
+                       <li class="slider__left__item">
+                        <p class="slider__item__dsc">
+                            Realme
+                        </p>
+                    </li>
+                    <!-- Bphone -->
+                    <li class="slider__left__item">
+                        <p class="slider__item__dsc">
+                            Bphone
+                        </p>
+                    </li>
+                    <!-- ONEPLUS -->
+                    <li class="slider__left__item">
+                        <p class="slider__item__dsc">
+                           ONEPLUS
+                        </p>
+                    </li>
+                    <!-- CAT -->
+                    <li class="slider__left__item">
+                        <p class="slider__item__dsc">
+                            CAT
+                        </p>
+                    </li>
+                
+                    <!-- ASUS -->
+                    <li class="slider__left__item">
+                        <p class="slider__item__dsc">
+                           ASUS
+                        </p>
+                    </li>
+                    <!-- Vsmart -->
+                    <li class="slider__left__item">
+                        <p class="slider__item__dsc">
+                           Vsmart
+                        </p>
+                    </li>
+                    <!-- Vivo -->
+                    <li class="slider__left__item">
+                        <p class="slider__item__dsc">
+                            Vivo
+                        </p>
+                    </li>
+                    <div class="slider_img">
+                    
+                        <img src="xả kho.png">
+                    </div>
+                </ul>
+            </div>
+            
+            <!-- Slide MId -->
+            <div class="slider__mid">
+                <ul class="slider__mid__list">
+                    <li class="slider__mid__item">
+                        <div class="slider__mid__img__swap">
+                            <img src="anh.png" alt="" class="slider__mid__img">
+                            <a href="https://tin.shopdunk.com/dat-hang-iphone-13-xanh-la-nhan-uu-dai-den-3-trieu-dong.html"><div class="slider__mid__body">
+                                <p>
+                                    Iphone 13 Chính hãng giá tốt
+                                </p>
+                            </div></a>
+                        </div>
+                    </li>
+                    <li class="slider__mid__item">
+                        <div class="slider__mid__img__swap">
+                            <img src="dienthoai.png" alt="" class="slider__mid__img">
+                            <a href="https://cellphones.com.vn/samsung-galaxy-note-20-ultra-5g.html"><div class="slider__mid__body">
+
+                                <p>
+                                    Samsung Galaxy Note 20 Ultra 5G
+                                </p>
+                            </div></a>
+                        </div>
+                    </li>
+                    <li class="slider__mid__item">
+                        <div class="slider__mid__img__swap">
+                            <img src="nova.png" alt="" class="slider__mid__img">
+                            <a href="https://cellphones.com.vn/tecno-pova-neo-6gb-128gb.html"></div>
+                                <div class="slider__mid__body">
+                                    <p>
+        
+                                        Tecno Pova Neo Đặt trước giá
+                                    </p>
+                                </div></a>
+                    </li>
+                    <!-- <li class="slider__mid__item">
+                        <div class="slider__mid__img__swap">
+                            <img src="./asset/css/img/tainghe.png" alt="" class="slider__mid__img">
+                        </div>
+                        <div class="slider__mid__body">
+                            <p>
+                                
+                                Sony WH-1400XM4 Nghe Nhạc Cực phê
+                            </p>
+                        </div>
+                    </li> -->
+                    <!-- <li class="slider__mid__item">
+                        <div class="slider__mid__img__swap">
+                            <img src="./asset/css/img/laptop.png" alt="" class="slider__mid__img">
+                        </div>
+                        <div class="slider__mid__body">
+                            <p>
+
+                                Tuần lễ Fujitsu Giảm Giá cực sốc
+                            </p>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+                
+            <!-- Slider Right -->
+
+            <div class="slider__right">
+                <ul class="slider__right__list">
+                    <li class="slider__right__item">
+                        <img src="a73.png.webp" alt="" class="slider__right__img">
+                    </li>
+                    <li class="slider__right__item">
+                        <img src="idepad3.png.webp" alt="" class="slider__right__img">
+                    </li>
+                    <li class="slider__right__item">
+                        <img src="iphone11.png.webp" alt="" class="slider__right__img">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="phone__list">
+            <li class="phone__item">
+                <img src="./iphone_11_white.png" alt="" class="phone__img">
+                <p class="phone__name">
+                    Iphone 11 White 256GB
+                </p>
+                <p class="phone__price">
+                    13.500.000đ
+                </p>
+            </li>
+            <li class="phone__item">
+                <img src="iphone_12_pro_max_white_1.png" alt="" class="phone__img">
+                <p class="phone__name">
+                    Iphone 12 Promax White 512GB
+                </p>
+                <p class="phone__price">
+                    23.400.000đ
+                </p>
+            </li>
+            <li class="phone__item">
+                <img src="iphone_13_green_pure_back_iphone_13_green_pure_front_2-up_screen__usen_1,png.png" alt="" class="phone__img">
+                <p class="phone__name">
+                    Iphone 13 Promax Green pure 256GB
+                </p>
+                <p class="phone__price">
+                    32.000.000đ
+                </p>
+            </li>
+            <li class="phone__item">
+                <img src="iphone_13_pro_max_alpine_green_pure_back_iphone_13_pro_max_alpine_green_pure_front_2-up_screen__usen,png.png" alt="" class="phone__img">
+                <p class="phone__name">
+                    Iphone 13 Promax Green 128GB
+                </p>
+                <p class="phone__price">
+                    32.500.000đ
+                </p>
+            </li>
+            <li class="phone__item">
+                <img src="iphone_13-_pro-5_4.png" alt="" class="phone__img">
+                <p class="phone__name">
+                    Iphone 13 Promax Blue 512GB
+                </p>
+                <p class="phone__price">
+                    34.000.000đ
+                </p>
+            </li>
+            <li class="phone__item">
+                <img src="iphone_13-_pro-5.png" alt="" class="phone__img">
+                <p class="phone__name">
+                    Iphone 13 Promax Blue 256GB
+                </p>
+                <p class="phone__price">
+                    33.300.000đ
+                </p>
+            </li>
+            <li class="phone__item">
+                <img src="iphone-12_2__3.png" alt="" class="phone__img">
+                <p class="phone__name">
+                    Iphone 12 128GB
+                </p>
+                <p class="phone__price">
+                    14.500.000đ
+                </p>
+            </li>
+            <li class="phone__item">
+                <img src="iphone-se-red-select-20220322.png" alt="" class="phone__img">
+                <p class="phone__name">
+                    Iphone SE 64GB
+                </p>
+                <p class="phone__price">
+                    10.200.000đ
+                </p>
+            </li>
+            <li class="phone__item">
+                <img src="s22_4_1.jpg" alt="" class="phone__img">
+                <p class="phone__name">
+                    Samsung Galaxy S22 Ultra(8GB-128GB)
+                </p>
+                <p class="phone__price">
+                    24.100.000đ
+                </p>
+            </li>
+            <li class="phone__item">
+                <img src="samsung-galaxy-a73-1-600x600.jpg" alt="" class="phone__img">
+                <p class="phone__name">
+                    Samsung Galaxy A73 (5G)
+                </p>
+                <p class="phone__price">
+                    10.690.000đ
+                </p>
+            </li>
+            <li class="phone__item">
+                <img src="yellow_final_2.jpg" alt="" class="phone__img">
+                <p class="phone__name">
+                    Samsung Galaxy Note 20 Ultra 5G
+                </p>
+                <p class="phone__price">
+                    18.990.000đ
+                </p>
+            </li>
+            <li class="phone__item">
+                <img src="sm-s908_galaxys22ultra_front_green_211119.jpg" alt="" class="phone__img">
+                <p class="phone__name">
+                    Samsung Galaxy S22 Ultra(8GB-128GB)
+                </p>
+                <p class="phone__price">
+                    29.100.000đ
+                </p>
+            </li>
+        </ul>
+        <div class="footer">
+            <p>Bản quyền: <span>&copy;</span> Hoàng Nguyễn Chí Công <br><a href="index_profie.html">Liên Hệ Chúng Tôi</a></p>
+        </div>
+        <script>
+            var burgers = document.getElementById('burger');
+            burgers.onclick = function () {
+                burgers.classList.toggle("open");
+            }
+            $(document).ready(function () {
+                $("#burger").click(function () {
+                    $(".menu").slideToggle();
+                })
+            })
+        </script>
+</body>
+</html>

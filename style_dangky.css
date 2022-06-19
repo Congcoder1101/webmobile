@@ -1,0 +1,125 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: cursive;
+}
+.app{
+   background-image: linear-gradient(0,rgb(52, 196, 201),rgb(44, 120, 132));
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;  
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.uni__heading{
+    text-align: center;
+    font-size: 4.4rem;
+    position: absolute;
+    
+left: 46%;
+    top: 20px;
+}
+.form__login{
+    width: 852px;
+    position: relative;
+    margin-top: 42px;
+   background-color: #fff;
+    max-height: 1000px
+}
+
+.cap
+{
+    width: 200px;
+    margin: 0 0 0 -380px;
+    object-fit: cover;
+}
+.login__input{
+    width: 74%;
+    margin: 0 0 18px 122px;
+    padding: 9px 2px 9px 5px ;
+    background-color: #fff;
+    border: #000;
+    border-radius: 5px;
+}
+.login__btn{
+    padding: 15px 277px;
+    background: #5e5ed0;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    margin: 0 0 0 21px;
+}
+.login__dsc{
+    text-align: center;
+    padding: 17px 0;
+    font-size: 2.4rem;
+    margin: 0 0 0 24px;
+}
+.login__diff{
+    text-align: center;
+    margin: 10px 0;
+}
+.btn__swap{
+    text-align: center;
+}
+.login__diff__item{
+    text-decoration: none;
+    padding: 11px 21px;
+    margin: 28px 6px;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.login__no{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 8px 0 0 0;
+}
+.gg{
+    background-color: rgba(212, 47, 47, 0.836);
+}
+.fb{
+    background-color: rgba(30, 30, 197, 0.815);
+}
+.dangky{
+    display: flex;
+    margin: 26px 0 8px 125px;
+    padding: 11px 270px 11px 273px;
+    /* margin: 0; */
+    font-size: 1.5rem;
+}
+.dangnhap{
+    display: flex;
+    margin: 26px 0 8px 125px;
+    padding: 11px 250px 11px 273px;
+    /* margin: 0; */
+    font-size: 1.5rem;
+}
+.or{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.coacc{
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 10px 0 15px 0;
+}
+.coacc span{
+    border-bottom: 1px dotted #fff;
+}
+.heading{
+    text-align: center;
+    padding: 23px 0;
+    font-size: 2.4rem;
+}
